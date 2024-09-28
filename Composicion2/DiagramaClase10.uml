@@ -1,0 +1,17 @@
+@startuml
+class Puerta {
+    - material: String
+    + Puerta(material: String)
+    + getMaterial(): String
+}
+
+class Casa {
+    - puerta: Puerta
+    + Casa(puerta: Puerta)
+    + cambiarPuerta(nuevaPuerta: Puerta)
+    + obtenerPuerta(): Puerta
+    + eliminarPuerta()
+}
+
+Casa *--> Puerta
+@enduml

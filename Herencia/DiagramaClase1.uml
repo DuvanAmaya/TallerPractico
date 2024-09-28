@@ -1,0 +1,11 @@
+@startuml
+class Animal {
+    + hacerSonido()
+}
+
+class Perro {
+    + moverCola()
+}
+
+Animal <|-- Perro
+@enduml

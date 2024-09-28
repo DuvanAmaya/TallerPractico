@@ -1,0 +1,15 @@
+@startuml
+class Libro {
+    - titulo: String
+    + Libro(titulo: String)
+    + getTitulo(): String
+}
+
+class Biblioteca {
+    - libros: List<Libro>
+    + añadirLibro(libro: Libro)
+    + mostrarLibros()
+}
+
+Biblioteca "1" --> "0..*" Libro
+@enduml

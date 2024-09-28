@@ -1,0 +1,23 @@
+@startuml
+class Empleado {
+    - nombre: String
+    + Empleado(nombre: String)
+    + getNombre(): String
+}
+
+class Proyecto {
+    - nombre: String
+    + Proyecto(nombre: String)
+    + getNombre(): String
+}
+
+class Asignacion {
+    - empleado: Empleado
+    - proyecto: Proyecto
+    + Asignacion(empleado: Empleado, proyecto: Proyecto)
+    + mostrarAsignacion()
+}
+
+Empleado "1" --> "0..*" Asignacion
+Proyecto "1" --> "0..*" Asignacion
+@enduml

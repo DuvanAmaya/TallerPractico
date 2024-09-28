@@ -1,0 +1,11 @@
+@startuml
+interface Nadador {
+    + nadar()
+}
+
+class Delfin {
+    + nadar()
+}
+
+Nadador <|.. Delfin
+@enduml

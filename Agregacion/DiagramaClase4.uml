@@ -1,0 +1,15 @@
+@startuml
+class Estudiante {
+    - nombre: String
+    + Estudiante(nombre: String)
+    + getNombre(): String
+}
+
+class Aula {
+    - estudiantes: List<Estudiante>
+    + Aula(estudiantes: List<Estudiante>)
+    + iniciarClase()
+}
+
+Aula o--> Estudiante
+@enduml

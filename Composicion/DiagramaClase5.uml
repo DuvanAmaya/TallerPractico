@@ -1,0 +1,15 @@
+@startuml
+class Procesador {
+    + encender()
+    + apagar()
+}
+
+class Computadora {
+    - procesador: Procesador
+    + Computadora()
+    + iniciar()
+    + apagar()
+}
+
+Computadora *--> Procesador
+@enduml

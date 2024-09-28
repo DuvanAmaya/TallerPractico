@@ -1,0 +1,13 @@
+@startuml
+class Documento {
+    - contenido: String
+    + Documento(contenido: String)
+    + getContenido(): String
+}
+
+class Impresora {
+    + imprimir(doc: Documento)
+}
+
+Impresora --> Documento
+@enduml
